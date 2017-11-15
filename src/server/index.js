@@ -13,6 +13,7 @@ const PORT = process.env.PORT || 5000;
 const app = express();
 
 const publicPath = path.resolve(__dirname, 'dist/public/');
+const iconPath = path.resolve(__dirname, 'icons');
 
 app.use(requestId({ paramName: 'requestId' }));
 app.use(logger.winston);
@@ -26,6 +27,7 @@ app.use(bodyParser.urlencoded({
 }));
 
 app.use('/public', express.static(publicPath, { redirect: false }));
+app.use('/icons', express.static(iconPath, { redirect: false }));
 
 routes.bind(app);
 

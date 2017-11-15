@@ -39,20 +39,6 @@ config.module.rules.push({
   include: APP_DIR,
 });
 
-config.module.rules.push({
-  test: /\.(png|jpg|gif|ico|xml)$/,
-  exclude: /node_modules/,
-  use: [
-    {
-      loader: 'file-loader',
-      options: {
-        name: '[name].[ext]',
-        publicPath: 'http://localhost:8100/public/icons/',
-      },
-    },
-  ],
-});
-
 config.plugins = [].concat(baseConfig.plugins, [
   new webpack.DefinePlugin({
     'process.env.NODE_ENV': '"dev"',

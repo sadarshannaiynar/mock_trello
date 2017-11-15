@@ -9,7 +9,6 @@ import ApplicationContainer from 'containers/AppContainer';
 import configureStore from 'store';
 
 require('es6-promise').polyfill();
-require('images/icons');
 
 const history = createBrowserHistory();
 

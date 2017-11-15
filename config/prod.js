@@ -31,17 +31,4 @@ config.module.rules.push({
   include: APP_DIR,
 });
 
-config.module.rules.push({
-  test: /\.(png|jpg|gif|ico|xml)$/,
-  exclude: /node_modules/,
-  use: [
-    {
-      loader: 'file-loader',
-      options: {
-        name: 'icons/[name].[ext]',
-      },
-    },
-  ],
-});
-
 module.exports = config;

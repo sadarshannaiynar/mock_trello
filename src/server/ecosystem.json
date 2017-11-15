@@ -3,16 +3,8 @@
     {
       "name": "boilerplate",
       "script": "src/server/index.js",
-      "watch": true,
       "instances": 4,
-      "ignore_watch": [
-        "logs",
-        "node_modules",
-        ".tmp",
-        ".idea",
-        ".vagrant",
-        ".git"
-      ],
+      "watch": ["src/server"],
       "env": {
         "DEBUG": "fetch:*"
       },

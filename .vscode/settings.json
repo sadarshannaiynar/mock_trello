@@ -50,5 +50,7 @@
   "eslint.enable": true,
   "stylelint.enable": true,
   "css.validate": false,
-  "scss.validate": false
+  "scss.validate": false,
+  "npm-intellisense.scanDevDependencies": true,
+  "npm-intellisense.packageSubfoldersIntellisense": true
 }
