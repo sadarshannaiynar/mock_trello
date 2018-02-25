@@ -30,11 +30,18 @@
   "author": "Adarsh",
   "license": "MIT",
   "dependencies": {
+    "body-parser": "^1.18.2",
+    "cookie-parser": "^1.4.3",
     "cross-env": "^5.0.1",
     "express": "^4.15.3",
+    "express-winston": "^2.5.0",
     "lodash": "^4.17.4",
     "pm2": "^2.6.1",
-    "pug": "^2.0.0-rc.2"
+    "pug": "^2.0.0-rc.2",
+    "request": "^2.83.0",
+    "request-id": "^0.11.1",
+    "uuid": "^3.2.1",
+    "winston": "^2.4.0"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
@@ -49,10 +56,8 @@
     "babel-preset-stage-0": "^6.24.1",
     "babel-preset-stage-1": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",
-    "body-parser": "^1.18.2",
     "chai": "^4.1.0",
     "chokidar-cli": "^1.2.0",
-    "cookie-parser": "^1.4.3",
     "css-loader": "^0.28.4",
     "cucumber": "^3.0.2",
     "cucumber-html-reporter": "^3.0.1",
@@ -66,7 +71,6 @@
     "eslint-plugin-import": "^2.7.0",
     "eslint-plugin-jsx-a11y": "^6.0.2",
     "eslint-plugin-react": "^7.1.0",
-    "express-winston": "^2.4.0",
     "extract-text-webpack-plugin": "^3.0.0",
     "file-loader": "^1.1.5",
     "history": "^4.6.3",
@@ -88,8 +92,6 @@
     "redux-logger": "^3.0.6",
     "redux-mock-store": "^1.2.3",
     "redux-thunk": "^2.2.0",
-    "request": "^2.83.0",
-    "request-id": "^0.11.1",
     "rimraf": "^2.6.1",
     "sass-loader": "^6.0.6",
     "selenium-standalone": "^6.7.0",
@@ -99,10 +101,8 @@
     "stylelint-config-standard": "^17.0.0",
     "stylelint-webpack-plugin": "^0.9.0",
     "url-loader": "^0.6.2",
-    "uuid": "^3.1.0",
     "webpack": "^3.4.1",
-    "webpack-dev-server": "^2.6.1",
-    "winston": "^2.4.0"
+    "webpack-dev-server": "^2.6.1"
   },
   "nyc": {
     "sourceMap": false,
