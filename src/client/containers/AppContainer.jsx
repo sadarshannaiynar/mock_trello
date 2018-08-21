@@ -1,17 +1,23 @@
 import { connect } from 'react-redux';
 import App from 'components/App';
-import actions from 'actions/actionCreators';
+import actions from '../actions/boardActions';
 
 const mapStateToProps = state => ({
-  value: state.actionReducer.value,
+  boards: state.boardReducer.boards,
 });
 
 const mapDispatchToProps = dispatch => ({
-  increment: () => {
-    dispatch(actions.incrementAction());
+  addBoard: (title) => {
+    dispatch(actions.addBoard(title));
   },
-  decrement: () => {
-    dispatch(actions.decrementAction());
+  addTaskToBoard: (boardTitle, task) => {
+    dispatch(actions.addTaskToBoard(boardTitle, task));
+  },
+  deleteTask: (boardTitle, taskId) => {
+    dispatch(actions.removeTask(boardTitle, taskId));
+  },
+  editTask: (boardTitle, taskId, task) => {
+    dispatch(actions.editTask(boardTitle, taskId, task));
   },
 });
 

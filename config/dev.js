@@ -39,6 +39,11 @@ config.module.rules.push({
   include: APP_DIR,
 });
 
+config.module.rules.push({
+  test: /\.(scss|sass)$/,
+  use: ['style-loader', 'css-loader', 'sass-loader', 'postcss-loader'],
+})
+
 config.plugins = [].concat(baseConfig.plugins, [
   new webpack.DefinePlugin({
     'process.env.NODE_ENV': '"dev"',

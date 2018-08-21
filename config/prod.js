@@ -1,6 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
 const _ = require('lodash');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 const baseConfig = require('./base');
 
@@ -30,5 +31,13 @@ config.module.rules.push({
   exclude: /node_modules/,
   include: APP_DIR,
 });
+
+config.module.rules.push({
+  test: /\.(scss|sass)$/,
+  use: ExtractTextPlugin.extract({
+    fallback: 'style-loader',
+    use: ['css-loader', 'sass-loader', 'postcss-loader'],
+  }),
+})
 
 module.exports = config;

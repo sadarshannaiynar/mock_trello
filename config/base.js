@@ -36,20 +36,6 @@ module.exports = {
         loader: 'eslint-loader',
       },
       {
-        test: /\.(scss|sass)$/,
-        use: ExtractTextPlugin.extract({
-          fallback: 'style-loader',
-          use: ['css-loader', 'sass-loader', 'postcss-loader'],
-        }),
-      },
-      {
-        test: /\.css$/,
-        use: ExtractTextPlugin.extract({
-          fallback: 'style-loader',
-          use: ['css-loader', 'postcss-loader'],
-        }),
-      },
-      {
         test: /\.(png|svg|jpg|gif|woff|woff2)$/,
         exclude: /node_modules/,
         use: 'url-loader',

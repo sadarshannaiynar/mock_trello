@@ -1,3 +1,17 @@
+@import 'listCard';
+@import 'taskCard';
+
 html {
-	font-family: 'Lato';
+	font-family: 'Roboto';
+	overflow: hidden;
+
+	body {
+		#app > div {
+			display: flex;
+
+			button:hover {
+				cursor: pointer;
+			}
+		}
+	}
 }

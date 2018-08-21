@@ -3,7 +3,7 @@
     {
       "name": "boilerplate",
       "script": "src/server/index.js",
-      "instances": 4,
+      "instances": 1,
       "watch": ["src/server"],
       "env": {
         "DEBUG": "fetch:*"
